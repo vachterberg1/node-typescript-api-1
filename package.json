@@ -8,6 +8,7 @@
     "start": "yarn build && node dist/src/index.js",
     "start:local": "ts-node-dev 'src/index.ts'",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --runInBand",
     "lint": "eslint ./src ./test --ext .ts",
     "lint:fix": "eslint ./src ./test --ext .ts --fix"
   },
@@ -28,14 +29,19 @@
   },
   "homepage": "https://github.com/waldemarnt/node-typescript-api#readme",
   "dependencies": {
-    "module-alias": "^2.2.2"
+    "@types/jest": "^26.0.24",
+    "module-alias": "^2.2.2",
+    "ts-jest": "^27.0.4"
   },
   "devDependencies": {
     "@types/module-alias": "^2.0.0",
     "@types/node": "^13.13.2",
+    "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^2.29.0",
     "eslint": "^6.8.0",
+    "jest": "^27.0.6",
+    "supertest": "^6.1.4",
     "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.8.3"
   }
